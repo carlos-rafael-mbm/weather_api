@@ -20,7 +20,6 @@ const getWeather = async(req = request, res = response) => {
             timezone: weather.timezone,
             icon: weather.weather[0].icon
         }
-        console.log(weatherResponse);
         res.json({ ...weatherResponse });
     } catch (error) {
         res.status(500).json({ msg: 'Error with Weather Api' });
